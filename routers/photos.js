@@ -5,7 +5,7 @@ const router = new Router();
 const Photos = require("../models").photo;
 
 //01- Endpoint for the "list of available photos" sorted by "CreatedAt".
-router.get("/", auth, async (req, res, next) => {
+router.get("/", async (req, res, next) => {
   try {
     const photos = await Photos.findAll();
 
