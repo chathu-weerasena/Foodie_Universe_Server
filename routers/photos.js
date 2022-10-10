@@ -3,11 +3,12 @@ const auth = require("../auth/middleware");
 const router = new Router();
 
 const Photos = require("../models").photo;
+const Users = require("../models").user;
 
 //01- Endpoint for the "list of available photos" sorted by "CreatedAt".
 router.get("/", async (req, res, next) => {
   try {
-    const photos = await Photos.findAll();
+    const photos = await Photos.findAll({ include: { model: Users } });
 
     res.status(200).send(photos);
     //console.log("Photos", photos);
