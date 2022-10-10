@@ -33,4 +33,45 @@ router.post("/:id", auth, async (req, res, next) => {
   }
 });
 
+//Endpoint for " Delete a photo"
+router.delete("/:id", auth, async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const photo = await Photos.findByPk(id);
+    if (!photo) {
+      return res.status(404).send("Photo is no longer available");
+    }
+    if (photo.userId !== req.user.id) {
+      return res
+        .status(401)
+        .send("You do not have permission to perform this action");
+    }
+    await photo.destroy();
+    res.send("Deleted", id);
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
+//End point to edit an uploaded post in "photo feed"
+router.patch("/:id", auth, async (req, res, next) => {
+  const { id } = req.params;
+  const { imageUrl, description } = req.body;
+
+  const photo = await Photos.findByPk(id);
+  if (!photo.userId === req.user.id) {
+    return res
+      .status(403)
+      .send("You do not have permission to perform this action");
+  }
+
+  const updatedPhoto = photo;
+  updatedPhoto.update({
+    imageUrl: imageUrl,
+    description: description,
+  });
+  return res.status(200).send({ photo: updatedPhoto });
+});
+
 module.exports = router;
