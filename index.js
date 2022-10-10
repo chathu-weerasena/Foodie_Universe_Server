@@ -24,7 +24,7 @@ app.use(express.json());
 //routes
 app.use("/auth", authRouter);
 app.use("/photos", photosRouter);
-app.use("./restaurants", retaurantsRouter);
+app.use("/restaurants", retaurantsRouter);
 
 //start listening
 app.listen(PORT, () => {

@@ -17,4 +17,20 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+//Endpoint for the "Add photo feature"
+router.post("/:id", auth, async (req, res, next) => {
+  const { imageUrl, description } = req.body;
+  if (!imageUrl || !description) {
+    res.status(400).send("We would like to post a picture and a description");
+  } else {
+    const newPhoto = await Photos.create({
+      imageUrl,
+      description,
+      userId: req.user.id,
+    });
+    res.status(201).send({ photo: newPhoto });
+    console.log("New Photo", newPhoto);
+  }
+});
+
 module.exports = router;
