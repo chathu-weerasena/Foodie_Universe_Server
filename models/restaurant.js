@@ -8,15 +8,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      restaurant.belongsTo(models.user, { foreignKey: "userId" });
+      restaurant.belongsTo(models.profile, { foreignKey: "profileId" });
     }
   }
   restaurant.init(
     {
       name: { type: DataTypes.STRING, allowNull: false },
       address: { type: DataTypes.STRING, allowNull: false },
-      description: { type: DataTypes.STRING, allowNull: true },
-      rating: { type: DataTypes.INTEGER, allowNull: true },
+      content: { type: DataTypes.STRING, allowNull: true },
+      image: { type: DataTypes.STRING, allowNull: true },
     },
     {
       sequelize,

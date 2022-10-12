@@ -9,11 +9,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      imageUrl: {
+      title: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      description: {
+      type: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      image: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      content: {
         type: Sequelize.STRING,
         allowNull: false,
       },
