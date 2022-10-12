@@ -4,6 +4,7 @@ const router = new Router();
 
 const Photos = require("../models").photo;
 const Users = require("../models").user;
+const Profiles = require("../models").profile;
 
 //01- Endpoint for the "list of available photos" sorted by "CreatedAt".
 router.get("/", async (req, res, next) => {

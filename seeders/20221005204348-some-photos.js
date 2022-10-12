@@ -16,6 +16,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 1,
+          userId: 1,
         },
         {
           title: "Coconut Relish",
@@ -26,6 +27,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 1,
+          userId: 1,
         },
         {
           title: "Paella",
@@ -37,6 +39,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 2,
+          userId: 2,
         },
         {
           title: "Italian Goodness",
@@ -48,6 +51,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 3,
+          userId: 3,
         },
         {
           title: "Best Vegan Burgers",
@@ -59,6 +63,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 4,
+          userId: 4,
         },
         {
           title: "Chinese Set Menu",
@@ -70,6 +75,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 5,
+          userId: 5,
         },
       ],
       {}

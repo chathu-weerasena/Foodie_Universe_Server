@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   profile.init(
     {
-      title: { tyoe: DataTypes.STRING, allowNull: false },
+      title: { type: DataTypes.STRING, allowNull: false },
     },
     {
       sequelize,

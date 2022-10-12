@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       restaurant.belongsTo(models.profile, { foreignKey: "profileId" });
+      restaurant.belongsTo(models.user, { foreignKey: "userId" });
     }
   }
   restaurant.init(

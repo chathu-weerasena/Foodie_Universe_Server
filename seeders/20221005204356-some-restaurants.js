@@ -16,6 +16,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 3,
+          userId: 3,
         },
         {
           name: "Restaurant Zaza's",
@@ -27,6 +28,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 1,
+          userId: 1,
         },
         {
           name: "Restaurant Bougainville",
@@ -38,6 +40,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 4,
+          userId: 4,
         },
         {
           name: "Water Tower (WT) Urban Kitchen",
@@ -49,6 +52,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 5,
+          userId: 5,
         },
         {
           name: "Restaurant Zuiver Utrecht",
@@ -60,6 +64,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 2,
+          userId: 2,
         },
       ],
       {}

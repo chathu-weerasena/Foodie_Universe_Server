@@ -15,6 +15,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 1,
+          userId: 1,
         },
         {
           title: "Buy two and pay for one",
@@ -24,6 +25,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 2,
+          userId: 2,
         },
         {
           title: "Biologic baby food",
@@ -33,6 +35,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 3,
+          userId: 3,
         },
         {
           title: "Romantic dinner in Utrecht city center",
@@ -43,6 +46,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 4,
+          userId: 4,
         },
         {
           title: "Tapas and good wine",
@@ -53,6 +57,7 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
           profileId: 5,
+          userId: 5,
         },
       ],
       {}
